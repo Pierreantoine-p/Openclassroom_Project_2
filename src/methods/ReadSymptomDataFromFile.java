@@ -22,7 +22,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
         try (final BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
 
-            String line = reader.readLine();
+            String line = reader.readLine().toLowerCase().trim();
 
             while (line != null) {
                 result.add(line);
