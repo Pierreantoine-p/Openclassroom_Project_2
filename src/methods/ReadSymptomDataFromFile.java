@@ -22,10 +22,10 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
         try (final BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
 
-            String line = reader.readLine().toLowerCase().trim();
+            String line = reader.readLine();
 
             while (line != null) {
-                result.add(line);
+                result.add(line.toLowerCase().trim());
                 line = reader.readLine();
                 System.out.println("line : " + line);
             }
