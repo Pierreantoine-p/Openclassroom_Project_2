@@ -18,7 +18,7 @@ public class AnalyticsCounter {
         final ISymptomWrite writeSymptoms = new WriteSymptomDataFromCount();
 
 
-        List<String> result = getSymptoms.getSymptoms("Openclassroom_Project_2/symptoms.txt");
+        List<String> result = getSymptoms.getSymptoms("symptoms.txt");
         countSymptoms.countSymptoms(result);
         Map<String, Integer> resultCount = countSymptoms.countSymptoms(result);
         writeSymptoms.writeSymptoms(resultCount);
