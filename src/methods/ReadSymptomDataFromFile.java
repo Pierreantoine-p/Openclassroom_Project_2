@@ -25,7 +25,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
             String line = reader.readLine();
 
             while (line != null) {
-                result.add(line);
+                result.add(line.toLowerCase().trim());
                 line = reader.readLine();
                 System.out.println("line : " + line);
             }
